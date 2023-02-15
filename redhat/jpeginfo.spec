@@ -42,11 +42,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 /usr/bin/*
 /usr/share/man/man1/*
-%doc README COPYRIGHT 
+%doc README COPYRIGHT
 
 
 %changelog
-* Sat Dec  7 2002 Timo Kokkonen <tjko@iki.fi> 
+* Sat Dec  7 2002 Timo Kokkonen <tjko@iki.fi>
 - Initial build.
-
-
