@@ -1,0 +1,20 @@
+name: jpeginfo-ubuntu-20.04
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+    - uses: actions/checkout@v2
+    - run: sudo apt update && sudo apt install -y build-essential tree gcc libjpeg9-dev
+    - run: bash ./configure
+    - run: make
+    - run: make test
+    - run: tree -a .
+    - uses: actions/upload-artifact@v2
+      with:
+        name: libjpeg_ubuntu-20.04_${{ github.sha }}
+        path: |
+          ./*.h
+          ./jpeginfo
