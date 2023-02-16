@@ -14,7 +14,7 @@ jobs:
     - run: tree -a .
     - uses: actions/upload-artifact@v2
       with:
-        name: libjpeg_ubuntu-20.04_${{ github.sha }}
+        name: jpeginfo-ubuntu-20.04_${{ github.sha }}
         path: |
           ./*.h
           ./jpeginfo
