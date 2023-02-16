@@ -7,7 +7,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - run: sudo apt update && sudo apt install -y build-essential tree gcc libjpeg9-dev
+    - run: sudo apt update && sudo apt install -y build-essential tree
     - run: bash ./configure
     - run: make
     - run: make test
